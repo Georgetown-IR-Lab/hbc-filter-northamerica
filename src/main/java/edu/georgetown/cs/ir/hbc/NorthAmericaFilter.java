@@ -36,12 +36,11 @@ public class NorthAmericaFilter {
         BlockingQueue<String> queue = new LinkedBlockingQueue<String>(10000);
         StatusesFilterEndpoint endpoint = new StatusesFilterEndpoint();
 
-        // add bounding box for North America (erring on the side of including extra regions)
-        // SW 14.12, -172.07
-        // NE 71.92, -49.73
+        // add bounding box for US + Canada (erring on the side of including extra regions)
         ArrayList<Location> locations = new ArrayList<Location>();
-        locations.add(new Location(new Location.Coordinate(14.12, 172.07),
-                                   new Location.Coordinate(71.92, -49.73)));
+        locations.add(new Location(
+                          new Location.Coordinate(-166.992188, 24.846565),
+                          new Location.Coordinate(-53.789063, 70.020587)));
         endpoint.locations(locations);
 
         Authentication auth = new OAuth1(consumerKey, consumerSecret, token, secret);
