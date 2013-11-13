@@ -11,6 +11,10 @@
     <!-- this makes maven-tools not bump us to snapshot versions -->
     <stabilized>true</stabilized>
     <!-- Fill these in via https://dev.twitter.com/apps -->
+    <consumer.key>TODO</consumer.key>
+    <consumer.secret>TODO</consumer.secret>
+    <access.token>TODO</access.token>
+    <access.token.secret>TODO</access.token.secret>
     <output.directory>out</output.directory>
   </properties>
   <dependencies>
